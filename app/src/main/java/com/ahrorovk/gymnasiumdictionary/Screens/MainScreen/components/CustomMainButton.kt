@@ -29,8 +29,8 @@ fun CustomMainButton(
 ) {
     Button(
         modifier = Modifier
-            .width(236.dp)
-            .height(56.dp)
+            .width(226.dp)
+            .height(46.dp)
 
 //            .offset(x=15.dp,y=10.dp)
 //            .blur(radius = 85.dp)
