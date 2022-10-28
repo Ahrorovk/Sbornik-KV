@@ -12,6 +12,7 @@ import androidx.compose.material.icons.filled.ArrowBackIos
 import androidx.compose.material.icons.filled.ArrowForwardIos
 import androidx.compose.runtime.*
 import androidx.compose.ui.*
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -31,15 +32,13 @@ fun DictionariesScreen_1(navController: NavController, viewModel:MainViewModel, 
     val listOfTjkWords = viewModel.listOfTjkWords
     val listOfRuWords = viewModel.listOfRuWords
     val listOfEnWords = viewModel.listOfEnWords
-//    val listOfEnTranscription = viewModel.listOfEnTranscription
     val listOfAudio = viewModel.listOfAudio
     val bottom = listOf(1)
-//    var list = listOf(0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,260,270,280,290,300)
     val category = viewModel.category
-//    var j by mutableStateOf(0)
     for(i in 0 until 30) {
         if (category == viewModel.listOfCategory[i]) {
             Scaffold(
+                backgroundColor = Color.White,
                 topBar = {
                     HomeScreenTopAppBar(
                         backIcon = R.drawable.back,
@@ -101,7 +100,6 @@ fun DictionariesScreen_1(navController: NavController, viewModel:MainViewModel, 
                 }
             ) {
 
-//        val mp3: MediaPlayer = MediaPlayer.create(context, listOfAudio[index.value])
                     LazyColumn() {
                         items(listOfTjkWords[i].size){index->
                             Log.e("INDEX"," is -> $index")

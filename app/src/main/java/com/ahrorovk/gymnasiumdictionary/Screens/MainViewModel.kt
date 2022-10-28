@@ -36,7 +36,6 @@ import com.ahrorovk.gymnasiumdictionary.Lists.ListOfAudio.listOfMp3Қ
 import com.ahrorovk.gymnasiumdictionary.Lists.ListOfAudio.listOfMp3Ҷ
 import com.ahrorovk.gymnasiumdictionary.Lists.ListOfAudio.listOfMp3Ӯ
 import com.ahrorovk.gymnasiumdictionary.Lists.ListOfAudio.listOfmP3Т
-import com.ahrorovk.gymnasiumdictionary.Lists.ListOfEnglishTranscription.listOfEnTrans
 import com.ahrorovk.gymnasiumdictionary.Lists.listOfTjk.listOfTjkA
 import com.ahrorovk.gymnasiumdictionary.Lists.ListOfCategories.word_2
 import com.ahrorovk.gymnasiumdictionary.Lists.ListOfCategories.word_1
@@ -233,7 +232,8 @@ class MainViewModel:ViewModel() {
     val listOfRuAWords = listOfRuА
     val listOfRuБWords = listOfRuБ
     val listOfRuBWords = listOfRuB
-    val listOfRuWords= listOf(listOfRuAWords,
+    val listOfRuWords = listOf(
+        listOfRuAWords,
         listOfRuБWords,
         listOfRuBWords,
         listOfRuГ,
@@ -267,7 +267,7 @@ class MainViewModel:ViewModel() {
     val listOfEnAWords = listOfEnA
     val listOfEnБWords = listOfEnБ
     val listOfEnBWords = listOfEnB
-    val listOfEnWords= listOf(
+    val listOfEnWords = listOf(
         listOfEnAWords,
         listOfEnБWords,
         listOfEnBWords,
@@ -299,7 +299,6 @@ class MainViewModel:ViewModel() {
         listOfEnЭ,
         listOfEnЯ,
     )
-    val listOfEnTranscription = listOfEnTrans
     val listOfAudio = listOf(
         listOfMp3A,
         listOfMp3Б,
@@ -332,31 +331,13 @@ class MainViewModel:ViewModel() {
         listOfMp3Э,
         listOfMp3Я
     )
-    var countClick= mutableStateOf(1)
     var col = mutableStateOf(Green)
-    private val _index = mutableStateOf(0)
-    val index = _index
-    fun setIndex(index:Int){
-        _index.value = index
-    }
     var category by mutableStateOf("")
     fun setSearch(text: String) {
         searchTextField = text
     }
-    fun setCategories(text:String){
+
+    fun setCategories(text: String) {
         category = text
     }
-//    fun setCountClick(text:Int){
-//            countClick[index]=(text%2)
-//        if (countClick[index] == 0) {
-//            setColor(Color(0xFF297AEC))
-//        } else if (countClick[index] == 1) {
-//            setColor(Color(0xFF53EC89))
-//        }
-//        println(countClick)
-//    }
-//    fun setColor(color: Color){
-//        col.value=color
-//    }
-
 }

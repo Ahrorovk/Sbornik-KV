@@ -1,5 +1,8 @@
 package com.ahrorovk.gymnasiumdictionary.Screens.HomeScreen.presentation
 
+import android.graphics.BlurMaskFilter
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffXfermode
 import android.util.Log
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.*
@@ -15,10 +18,13 @@ import androidx.compose.ui.composed
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Paint
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.ahrorovk.gymnasiumdictionary.R
@@ -33,7 +39,9 @@ import com.ahrorovk.gymnasiumdictionary.ui.theme.WHITE
 @Composable
 fun HomeScreen(navController: NavController,viewModel: MainViewModel) {
     val listOfCategory = viewModel.listOfCategory
-    Scaffold(topBar = {
+    Scaffold(
+        backgroundColor = Color.White,
+        topBar = {
         HomeScreenTopAppBar(
             backIcon= R.drawable.back,
             searchIcon= R.drawable.ic_search,
@@ -141,3 +149,70 @@ fun Modifier.innerShadow() = composed(
         }
     },
 )
+fun Modifier.innerShadows(
+    color: Color = Color.Black,
+    cornersRadius: Dp = 0.dp,
+    spread: Dp = 0.dp,
+    blur: Dp = 0.dp,
+    offsetY: Dp = 0.dp,
+    offsetX: Dp = 0.dp
+) = drawWithContent {
+
+    drawContent()
+
+    val rect = Rect(Offset.Zero, size)
+    val paint = Paint()
+
+    drawIntoCanvas {
+
+        paint.color = color
+        paint.isAntiAlias = true
+        it.saveLayer(rect, paint)
+        it.drawRoundRect(
+            left = rect.left,
+            top = rect.top,
+            right = rect.right,
+            bottom = rect.bottom,
+            cornersRadius.toPx(),
+            cornersRadius.toPx(),
+            paint
+        )
+        val frameworkPaint = paint.asFrameworkPaint()
+        frameworkPaint.xfermode = PorterDuffXfermode(PorterDuff.Mode.DST_OUT)
+        if (blur.toPx() > 0) {
+            frameworkPaint.maskFilter = BlurMaskFilter(blur.toPx(), BlurMaskFilter.Blur.NORMAL)
+        }
+        val left = if (offsetX > 0.dp) {
+            rect.left + offsetX.toPx()
+        } else {
+            rect.left
+        }
+        val top = if (offsetY > 0.dp) {
+            rect.top + offsetY.toPx()
+        } else {
+            rect.top
+        }
+        val right = if (offsetX < 0.dp) {
+            rect.right + offsetX.toPx()
+        } else {
+            rect.right
+        }
+        val bottom = if (offsetY < 0.dp) {
+            rect.bottom + offsetY.toPx()
+        } else {
+            rect.bottom
+        }
+        paint.color = Color.Black
+        it.drawRoundRect(
+            left = left + spread.toPx() / 2,
+            top = top + spread.toPx() / 2,
+            right = right - spread.toPx() / 2,
+            bottom = bottom - spread.toPx() / 2,
+            cornersRadius.toPx(),
+            cornersRadius.toPx(),
+            paint
+        )
+        frameworkPaint.xfermode = null
+        frameworkPaint.maskFilter = null
+    }
+}

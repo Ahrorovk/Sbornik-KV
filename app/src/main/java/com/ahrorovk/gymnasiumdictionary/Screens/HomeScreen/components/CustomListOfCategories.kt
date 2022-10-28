@@ -24,6 +24,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ahrorovk.gymnasiumdictionary.Screens.HomeScreen.presentation.innerShadow
+import com.ahrorovk.gymnasiumdictionary.Screens.HomeScreen.presentation.innerShadows
 import com.ahrorovk.gymnasiumdictionary.ui.theme.BLACK
 import com.ahrorovk.gymnasiumdictionary.ui.theme.BLUE
 import com.ahrorovk.gymnasiumdictionary.ui.theme.WHITE
@@ -36,12 +37,16 @@ fun CustomListOfCategories(
     Box(
         Modifier
             .fillMaxWidth()
-//            .border(width = 1.dp, BLUE, RoundedCornerShape(30.dp))
             .padding(vertical = 5.dp)
             .clickable { onClick() }
-//            .clip(RoundedCornerShape(30.dp))
             .background(Color.White)
-            .innerShadow()
+            .innerShadows(
+                blur = 1.dp,
+                color = Color.LightGray,
+                cornersRadius = 5.dp,
+                offsetX = (-5).dp,
+                offsetY = (-2).dp
+            )
         ,
 
         contentAlignment = Alignment.Center
@@ -53,13 +58,6 @@ fun CustomListOfCategories(
             color = BLACK,
             fontSize = 20.sp,
             fontFamily = FontFamily.SansSerif,
-//            style = MaterialTheme.typography.h4.copy(
-//                shadow = Shadow (
-//                    color = Color.Gray,
-//                    offset = Offset(x=20f,15f),
-//                    blurRadius = 0.5f,
-//                )
-//            )
         )
     }
 }

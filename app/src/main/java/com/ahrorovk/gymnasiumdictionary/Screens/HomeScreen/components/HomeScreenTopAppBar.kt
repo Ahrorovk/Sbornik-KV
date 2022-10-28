@@ -13,10 +13,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ahrorovk.gymnasiumdictionary.Constants
+import com.ahrorovk.gymnasiumdictionary.R
 import com.ahrorovk.gymnasiumdictionary.Screens.MainViewModel
 import com.ahrorovk.gymnasiumdictionary.ui.theme.WHITE
 
@@ -80,8 +83,8 @@ fun HomeScreenTopAppBar(
                         Row(modifier=Modifier.padding()) {
                             TextField(
                                 modifier = Modifier
-                                    .width(357.dp)
-                                    .height(60.dp)
+                                    .fillMaxWidth(0.8f)
+                                    .fillMaxHeight(0.95f)
                                     .clip(RoundedCornerShape(19.dp)),
                                 value = value,
                                 leadingIcon = {
@@ -99,7 +102,10 @@ fun HomeScreenTopAppBar(
                                     viewModel.setSearch(it)
                                 },
                                 placeholder = {
-                                    Text("Кофтани калимахо", fontSize = 12.sp)
+                                    Text(if(Constants.tjk) stringResource(id = R.string.wordSearchTjk)
+                                    else if (Constants.ru) stringResource(id = R.string.wordSearchRu)
+                                    else if(Constants.en) stringResource(id = R.string. wordSearchEn )
+                                    else stringResource(id = R.string.wordSearchTjk), fontSize = 12.sp)
                                 },
                                 colors = TextFieldDefaults.textFieldColors(
                                     textColor = Color.Black,
@@ -116,7 +122,7 @@ fun HomeScreenTopAppBar(
 //                                bool1 = !bool1
                                 }) {
                                     Icon(
-                                        modifier = Modifier.size(25.dp),
+                                        modifier = Modifier.size(25.dp).fillMaxWidth(0.2f),
                                         tint = WHITE,
                                         imageVector = Icons.Outlined.Cancel,
                                         contentDescription = null
@@ -137,7 +143,10 @@ fun HomeScreenTopAppBar(
                 Spacer(modifier = Modifier.padding(5.dp))
                 Text(
                     modifier = Modifier.fillMaxWidth(),
-                    text = "СЛОВАРЬ ДЛЯ УЧАЩИХСЯ",
+                    text = if(Constants.tjk) stringResource(id = R.string.vocabularyForStudentsTjk)
+                    else if (Constants.ru) stringResource(id = R.string.vocabularyForStudentsRu)
+                    else if(Constants.en) stringResource(id = R.string. vocabularyForStudentsEn )
+                    else stringResource(id = R.string.vocabularyForStudentsTjk),
                     fontSize = 18.sp,
                     color = WHITE,
                     fontWeight = FontWeight.SemiBold,
