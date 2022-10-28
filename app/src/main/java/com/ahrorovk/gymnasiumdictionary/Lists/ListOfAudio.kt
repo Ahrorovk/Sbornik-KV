@@ -25,7 +25,7 @@ object ListOfAudio {
         R.raw.expression_of_thoughts,
         R.raw.party,
         R.raw.international__gb_2,
-        R.raw.between__gb_3,
+        R.raw.between_cities,
         R.raw.rise__gb_2,
         R.raw.exit__gb_1,
         R.raw.snow__gb_1,
@@ -468,17 +468,3 @@ object ListOfAudio {
         R.raw.ice_cream_1_gb_3
     )
 }
-/*
-//        R.raw.assistance__gb_2,//its 2//asd
-//        R.raw.assistance__gb_2,//its 2
-//        R.raw.strike__gb_1,//бить
-//        R.raw.soil__gb_1,//земля
-//        R.raw.land__gb_1,//земля
-//        R.raw.period__gb_2,//время
-//        R.raw.epoch__gb_1,//время
-//        R.raw.era__gb_1,//время
-//        R.raw.woman__gb_2,//жена, женщина
-//        R.raw.feminine__gb_1,//женский
-//        R.raw.make__gb_1,//звонить
-//        R.raw.necessity__gb_1,//необходимо(необходимость)
-//        R.raw.tableware__gb_1,//посуда*/

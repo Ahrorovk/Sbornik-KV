@@ -35,6 +35,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.ahrorovk.gymnasiumdictionary.R
 import com.ahrorovk.gymnasiumdictionary.Screens.HomeScreen.presentation.innerShadow
+import com.ahrorovk.gymnasiumdictionary.Screens.HomeScreen.presentation.innerShadows
 import com.ahrorovk.gymnasiumdictionary.Screens.MainViewModel
 import com.ahrorovk.gymnasiumdictionary.ui.theme.BLUE
 import com.ahrorovk.gymnasiumdictionary.ui.theme.Green
@@ -55,27 +56,6 @@ fun CustomDictionariesWordsBox(
     mp3Get:Boolean
 ) {
     val clipboardManager: ClipboardManager = LocalClipboardManager.current
-//    var text by remember { mutableStateOf("")}
-
-//    Column(modifier = Modifier.fillMaxSize()) {
-//
-//        TextField(value = text, onValueChange = {text = it})
-//        Button(onClick = {
-//            clipboardManager.setText(AnnotatedString(("$tjk $ru $en")))
-//        }) {
-//            Text("Copy")
-//        }
-//
-//        Button(onClick = {
-//            clipboardManager.getText()?.text?.let {
-//                text = it
-//            }
-//        }) {
-//            Text("Get")
-//        }
-//    }
-    val coroutine = rememberCoroutineScope()
-    var color by viewModel.col
     var count by remember { mutableStateOf(false) }
     var k by remember { mutableStateOf(1) }
     val localContext = LocalContext.current
@@ -88,9 +68,14 @@ fun CustomDictionariesWordsBox(
         Box(
             modifier = Modifier
                 .padding(start = 3.dp, end = 3.dp)
-                .innerShadow()
+                .innerShadows(
+                    blur = 1.dp,
+                    color = Color.LightGray,
+                    cornersRadius = 5.dp,
+                    offsetX = (-6.5).dp,
+                    offsetY = (-3).dp
+                )
                 .clip(RoundedCornerShape(20.dp))
-//                .background(BLUE)
 
         ) {
             Column(
@@ -102,52 +87,24 @@ fun CustomDictionariesWordsBox(
                 Text(
                     modifier = Modifier.fillMaxWidth(),
                     text = tjk,
-                    textDecoration = TextDecoration.Underline,
                     fontSize = 16.sp,
                     color = Color.Black,
-                    fontWeight = FontWeight.Bold,
                     fontStyle = FontStyle.Normal
                 )
-//                    Spacer(modifier = Modifier.padding(5.dp))
                 Spacer(modifier = Modifier.padding(2.dp))
-//                Divider()
-//                Icon(
-//                    modifier = Modifier
-//                        .fillMaxWidth(0.1f)
-//                        .size(20.dp),
-//                    painter = painterResource(id = R.drawable.divider),
-//                    contentDescription = null
-//                )
-//                    Spacer(modifier = Modifier.padding(5.dp))
-//                Spacer(modifier = Modifier.padding(2.dp))
                 Text(
                     modifier = Modifier.fillMaxWidth(),
                     text = ru,
-                    textDecoration = TextDecoration.Underline,
                     fontSize = 16.sp,
                     color = Color.Black,
-                    fontWeight = FontWeight.Bold,
                     fontStyle = FontStyle.Normal
                 )
-//                    Spacer(modifier = Modifier.padding(5.dp))
-//                Spacer(modifier = Modifier.padding(2.dp))
-                /*Icon(
-                    modifier = Modifier
-                        .fillMaxWidth(0.1f)
-                        .size(20.dp),
-                    painter = painterResource(id = R.drawable.divider),
-                    contentDescription = null
-                )*/
                 Spacer(modifier = Modifier.padding(2.dp))
-//                Divider()
-//                    Spacer(modifier = Modifier.padding(5.dp))
                 Text(
                     modifier = Modifier.fillMaxWidth(),
                     text = en,
-                    textDecoration = TextDecoration.Underline,
                     fontSize = 16.sp,
                     color = Color.Black,
-                    fontWeight = FontWeight.Bold,
                     fontStyle = FontStyle.Normal
                 )
                 Spacer(modifier = Modifier.padding(5.dp))
@@ -158,8 +115,13 @@ fun CustomDictionariesWordsBox(
             Box(
                 modifier = Modifier
                     .padding(start = 3.dp, end = 3.dp, top = 3.dp, bottom = 3.dp)
-//                    .clip(RoundedCornerShape(20.dp))
-                    .innerShadow()
+                    .innerShadows(
+                        blur = 1.dp,
+                        color = Color.LightGray,
+                        cornersRadius = 5.dp,
+                        offsetX = (-5).dp,
+                        offsetY = (-2).dp
+                    )
             ) {
                 IconButton(modifier = Modifier
                     .padding(end = 5.dp)
@@ -177,8 +139,13 @@ fun CustomDictionariesWordsBox(
             Box(
                 modifier = Modifier
                     .padding(start = 3.dp, end = 3.dp, top = 3.dp, bottom = 3.dp)
-//                    .clip(RoundedCornerShape(20.dp))
-                    .innerShadow()
+                    .innerShadows(
+                        blur = 1.dp,
+                        color = Color.LightGray,
+                        cornersRadius = 5.dp,
+                        offsetX = (-5).dp,
+                        offsetY = (-2).dp
+                    )
             ) {
                 IconButton(modifier = Modifier
                     .padding(end = 5.dp)

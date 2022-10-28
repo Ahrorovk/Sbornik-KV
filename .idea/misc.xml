@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ahrorov/AndroidStudioProjects/GymnasiumDictionary/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.177" />
+        <entry key="..\:/Users/ahrorov/AndroidStudioProjects/GymnasiumDictionary/app/src/main/res/drawable/ic_infoimage.xml" value="0.177" />
+        <entry key="..\:/Users/ahrorov/AndroidStudioProjects/GymnasiumDictionary/app/src/main/res/drawable/ic_map.xml" value="0.177" />
         <entry key="..\:/Users/ahrorov/AndroidStudioProjects/GymnasiumDictionary/app/src/main/res/drawable/ic_myphoto.xml" value="0.185" />
         <entry key="..\:/Users/ahrorov/AndroidStudioProjects/GymnasiumDictionary/app/src/main/res/drawable/ic_roww.xml" value="0.185" />
         <entry key="..\:/Users/ahrorov/AndroidStudioProjects/GymnasiumDictionary/app/src/main/res/drawable/logo.xml" value="0.145" />

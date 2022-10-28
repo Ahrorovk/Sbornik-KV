@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">Сборник таджиско-русско-английских слов KV</string>
+    <string name="app_name">Луғати вожаҳои серистеъмоли забонҳои тоҷикӣ, русӣ ва англисӣ</string>
+    <string name="app_nameRu">Словарь часто употребляемых слов таджикского, русского и английского языков</string>
+    <string name="app_nameEn">Dictionary of frequently used words of Tajik, Russian and English languages</string>
+    <string name="settingsTjk">ТАНЗИМОТ</string>
+    <string name="settingsRu">НАСТРОЙКИ</string>
+    <string name="settingsEn">SETTINGS</string>
+    <string name="startTjk">ВУРУД</string>
+    <string name="startRu">ВХОД</string>
+    <string name="startEn">ENTER</string>
+    <string name="aboutTjk">МАЪЛУМОТ</string>
+    <string name="aboutRu">О ПРИЛОЖЕНИИ</string>
+    <string name="aboutEn">ABOUT</string>
+    <string name="goOutTjk">БАРОМАД</string>
+    <string name="goOutRu">ВЫЙТИ</string>
+    <string name="goOutEn">QUIT</string>
+    <string name="vocabularyForStudentsTjk">Луғати вожаҳои серистеъмол</string>
+    <string name="vocabularyForStudentsRu">Словарь часто употребляемых слов</string>
+    <string name="vocabularyForStudentsEn">Dictionary of frequently used words</string>
+    <string name="wordSearchTjk">Ҷустуҷӯи Калима</string>
+    <string name="wordSearchRu">Поиск Слов</string>
+    <string name="wordSearchEn">Word Search</string>
+    <string name="aboutUsTjk">Муаллифи лоиҳа: Аҳроров Кароматуллохон - Таҳиягари-андроид, хонандаи синфи 10-и гимназияи №4 ш. Хуҷанд\nРоҳбарони лоиҳа:\nАчилов Хусейн, омӯзгори фанни технологияи иттилоотӣ\nҲамидова Гулчеҳра, омӯзгори фанни забони англисӣ, гимназияи №4, ш. Хуҷанд</string>
+    <string name="aboutUsRu">Автор проекта: Ахроров Кароматуллохон - Андроид-разработчик, учащийся 10 класса гимназии № 4 г. Худжанд\nРуководители проекта:\nАчилов Хусейн, учитель информационных технологий\nХамидова Гулчехра, учитель английского языка, гимназия №4, г. Худжанд</string>
+    <string name="aboutUsEn">Author of the project: Ahrorov Karomatullokhon - Android-developer, 10th grade student of gymnasium No. 4 c. Khujand\nProject leaders:\nAchilov Huseyn, teacher of information technology\nHamidova Gulchehra, English language teacher, gymnasium #4, sh. Khujand</string>
+    <string name="publishedTjk">Вазорати маориф ва илми Ҷумҳурии Тоҷикистон нашр кардааст</string>
+    <string name="publishedRu">Издано Министерство образования и науки Республики Таджикистан</string>
+    <string name="publishedEn">Published by the Ministry of Education and Science of the Republic of Tajikistan</string>
 </resources>
