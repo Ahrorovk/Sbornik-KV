@@ -16,14 +16,14 @@
     <string name="goOutEn">QUIT</string>
     <string name="vocabularyForStudentsTjk">Луғати вожаҳои серистеъмол</string>
     <string name="vocabularyForStudentsRu">Словарь часто употребляемых слов</string>
-    <string name="vocabularyForStudentsEn">Dictionary of frequently used words</string>
+    <string name="vocabularyForStudentsEn">Dictionary of the frequently used words</string>
     <string name="wordSearchTjk">Ҷустуҷӯи Калима</string>
     <string name="wordSearchRu">Поиск Слов</string>
     <string name="wordSearchEn">Word Search</string>
-    <string name="aboutUsTjk">Муаллифи лоиҳа: Аҳроров Кароматуллохон - Таҳиягари-андроид, хонандаи синфи 10-и гимназияи №4 ш. Хуҷанд\nРоҳбарони лоиҳа:\nАчилов Хусейн, омӯзгори фанни технологияи иттилоотӣ\nҲамидова Гулчеҳра, омӯзгори фанни забони англисӣ, гимназияи №4, ш. Хуҷанд</string>
-    <string name="aboutUsRu">Автор проекта: Ахроров Кароматуллохон - Андроид-разработчик, учащийся 10 класса гимназии № 4 г. Худжанд\nРуководители проекта:\nАчилов Хусейн, учитель информационных технологий\nХамидова Гулчехра, учитель английского языка, гимназия №4, г. Худжанд</string>
-    <string name="aboutUsEn">Author of the project: Ahrorov Karomatullokhon - Android-developer, 10th grade student of gymnasium No. 4 c. Khujand\nProject leaders:\nAchilov Huseyn, teacher of information technology\nHamidova Gulchehra, English language teacher, gymnasium #4, sh. Khujand</string>
-    <string name="publishedTjk">Вазорати маориф ва илми Ҷумҳурии Тоҷикистон нашр кардааст</string>
-    <string name="publishedRu">Издано Министерство образования и науки Республики Таджикистан</string>
+    <string name="aboutUsTjk">Муаллифи лоиҳа: Аҳроров Кароматуллохон - Таҳиягари-андроид, хонандаи синфи 10, гимназияи #4, ш. Хуҷанд\nРоҳбарони лоиҳа:\nАчилов Хусейн, омӯзгори фанни технологияи иттилоотӣ\nҲамидова Гулчеҳра, омӯзгори фанни забони англисӣ, гимназияи №4, ш. Хуҷанд</string>
+    <string name="aboutUsRu">Автор проекта: Ахроров Кароматуллохон - Андроид-разработчик, учащийся 10 класса гимназии № 4, г. Худжанд\nРуководители проекта:\nАчилов Хусейн, учитель информационных технологий\nХамидова Гулчехра, учитель английского языка гимназии №4, г. Худжанд</string>
+    <string name="aboutUsEn">Author of the project: Ahrorov Karomatullokhon - Android-developer, 10th grade student, gymnasium #4, Khujand\nProject leaders:\nAchilov Huseyn, teacher of information technology\nHamidova Gulchehra, English language teacher, gymnasium #4, Khujand</string>
+    <string name="publishedTjk">Нашри Вазорати маориф ва илми Ҷумҳурии Тоҷикистон</string>
+    <string name="publishedRu">Издано Министерством образования и науки Республики Таджикистан</string>
     <string name="publishedEn">Published by the Ministry of Education and Science of the Republic of Tajikistan</string>
 </resources>
